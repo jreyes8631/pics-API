@@ -4,7 +4,7 @@ class ImageCard extends React.Component {
 
     constructor(props) {
         super(props);
-        
+
         this.imageRef = React.createRef();
     }
     
@@ -12,7 +12,7 @@ class ImageCard extends React.Component {
         const {description, urls} = this.props.image
         return(
             <div>
-                <img 
+                <img ref={this.imageRef} 
                 alt={description}
                 src={urls.regular}
                 />
